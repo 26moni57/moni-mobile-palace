@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moni Mobile Palace</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "SolaimanLipi", Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #222;
+      transition: background-color 0.4s, color 0.4s;
+      padding: 10px 15px 30px 15px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: #343a40;
+      color: white;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+    }
+    nav {
+      margin: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+    nav button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    nav button:hover {
+      background-color: #0056b3;
+    }
+    section {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    a.brand-link {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 18px;
+    }
+    a.brand-link:hover {
+      text-decoration: underline;
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    form input[type="text"],
+    form input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+    form button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 15px;
+      font-size: 14px;
+      color: #666;
+      width: 100%;
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    body.dark-mode header {
+      background-color: #1f1f1f;
+      color: #ccc;
+    }
+    body.dark-mode section {
+      background-color: #1e1e1e;
+      box-shadow: 0 0 12px rgba(255,255,255,0.1);
+    }
+    body.dark-mode a.brand-link {
+      color: #66aaff;
+    }
+    body.dark-mode nav button {
+      background-color: #3399ff;
+    }
+    body.dark-mode nav button:hover {
+      background-color: #1a75ff;
+    }
+    body.dark-mode form input[type="text"],
+    body.dark-mode form input[type="tel"] {
+      background-color: #2b2b2b;
+      border-color: #555;
+      color: #eee;
+    }
+    body.dark-mode form button {
+      background-color: #3399ff;
+    }
+    body.dark-mode form button:hover {
+      background-color: #1a75ff;
+    }
+    /* Responsive */
+    @media (max-width: 640px) {
+      nav button {
+        margin: 8px 5px;
+        padding: 10px 14px;
+      }
+      section {
+        max-width: 100%;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📱 Moni Mobile Palace</h1>
+  <p>Prince Plaza, Madaripur Bazar, Tanore, Rajshahi</p>
+  <p>মোবাইল, সফটওয়্যার, হার্ডওয়্যার ও কম্পিউটার সার্ভিসিং</p>
+</header>
+
+<nav>
+  <button id="langToggleBtn">English</button>
+  <button id="modeToggleBtn">🌙 Dark Mode</button>
+</nav>
+
+<section id="brandsSection">
+  <h2>💼 জনপ্রিয় মোবাইল ব্র্যান্ডের অফিসিয়াল লিংক</h2>
+  <ul>
+    <li><a href="https://www.samsung.com/bd/mobile/" target="_blank" class="brand-link">📱 Samsung বাংলাদেশ</a></li>
+    <li><a href="https://www.oppo.com/bd/" target="_blank" class="brand-link">📱 Oppo বাংলাদেশ</a></li>
+    <li><a href="https://www.vivo.com/bd/" target="_blank" class="brand-link">📱 Vivo বাংলাদেশ</a></li>
+    <li><a href="https://www.mi.com/bd/" target="_blank" class="brand-link">📱 Xiaomi (Mi) বাংলাদেশ</a></li>
+  </ul>
+</section>
+
+<section id="orderSection">
+  <h2>📝 অর্ডার ফর্ম</h2>
+  <form action="https://formsubmit.co/46moni96@gmail.com" method="POST" id="orderForm">
+    <label for="name" id="labelName">আপনার নাম:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="phone" id="labelPhone">মোবাইল নম্বর:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="product" id="labelProduct">যে পণ্য অর্ডার করতে চান লিখুন:</label>
+    <input type="text" id="product" name="product" required />
+
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://thank.you.page.or.custom.url/" />
+
+    <button type="submit" id="submitBtn">✅ অর্ডার সাবমিট করুন</button>
+  </form>
+</section>
+
+<section id="contactSection">
+  <h2>📞 যোগাযোগ করুন</h2>
+  <p id="contactPhone">ফোন: <strong>+8801763-071247</strong></p>
+  <p id="contactAddress">ঠিকানা: Prince Plaza, Madaripur Bazar, Tanore, Rajshahi</p>
+</section>
+
+<footer>
+  © 2025 Moni Mobile Palace | ডিজাইন করেছেন Moni Monirul
+</footer>
+
+<script>
+  // Initial language state: Bangla = true
+  let isBangla = true;
+
+  // Elements for language toggle text
+  const langToggleBtn = document.getElementById('langToggleBtn');
+  const modeToggleBtn = document.getElementById('modeToggleBtn');
+
+  // Text content for Bangla and English
+  const textContent = {
+    bn: {
+      langBtn: 'English',
+      modeBtnLight: '🌙 ডার্ক মোড',
+      modeBtnDark: '☀️ লাইট মোড',
+      brandsTitle: '💼 জনপ্রিয় মোবাইল ব্র্যান্ডের অফিসিয়াল লিংক',
+      orderTitle: '📝 অর্ডার ফর্ম',
+      contactTitle: '📞 যোগাযোগ করুন',
+      labelName: 'আপনার নাম:',
+      labelPhone: 'মোবাইল নম্বর:',
+      labelProduct: 'যে পণ্য অর্ডার করতে চান লিখুন:',
+      submitBtn: '✅ অর্ডার সাবমিট করুন',
+      contactPhone: 'ফোন: ',
+      contactAddress: 'ঠিকানা: Prince Plaza, Madaripur Bazar, Tanore, Rajshahi',
+      headerLine1: 'Prince Plaza, Madaripur Bazar, Tanore, Rajshahi',
+      headerLine2: 'মোবাইল, সফটওয়্যার, হার্ডওয়্যার ও কম্পিউটার সার্ভিসিং',
+      footer: '© 2025 Moni Mobile Palace | ডিজাইন করেছেন Moni Monirul',
+    },
+    en: {
+      langBtn: 'বাংলা',
+      modeBtnLight: '🌙 Dark Mode',
+      modeBtnDark: '☀️ Light Mode',
+      brandsTitle: '💼 Popular Mobile Brand Official Links',
+      orderTitle: '📝 Order Form',
+      contactTitle: '📞 Contact Us',
+      labelName: 'Your Name:',
+      labelPhone: 'Mobile Number:',
+      labelProduct: 'Product you want to order:',
+      submitBtn: '✅ Submit Order',
+      contactPhone: 'Phone: ',
+      contactAddress: 'Address: Prince Plaza, Madaripur Bazar, Tanore, Rajshahi',
+      headerLine1: 'Prince Plaza, Madaripur Bazar, Tanore, Rajshahi',
+      headerLine2: 'Mobile, Software, Hardware & Computer Servicing',
+      footer: '© 2025 Moni Mobile Palace | Designed by Moni Monirul',
+    }
+  };
+
+  // Elements to update text dynamically
+  const elementsToUpdate = {
+    langBtn: langToggleBtn,
+    modeBtn: modeToggleBtn,
+    brandsTitle: document.querySelector('#brandsSection h2'),
+    orderTitle: document.querySelector('#orderSection h2'),
+    contactTitle: document.querySelector('#contactSection h2'),
+    labelName: document.getElementById('labelName'),
+    labelPhone: document.getElementById('labelPhone'),
+    labelProduct: document.getElementById('labelProduct'),
+    submitBtn: document.getElementById('submitBtn'),
+    contactPhone: document.getElementById('contactPhone'),
+    contactAddress: document.getElementById('contactAddress'),
+    headerLine1: document.querySelector('header p:nth-child(2)'),
+    headerLine2: document.querySelector('header p:nth-child(3)'),
+    footer: document.querySelector('footer')
+  };
+
+  function updateLanguage() {
+    const lang = isBangla ? 'bn' : 'en';
+
+    elementsToUpdate.langBtn.textContent = textContent[lang].langBtn;
+    elementsToUpdate.brandsTitle.textContent = textContent[lang].brandsTitle;
+    elementsToUpdate.orderTitle.textContent = textContent[lang].orderTitle;
+    elementsToUpdate.contactTitle.textContent = textContent[lang].contactTitle;
+    elementsToUpdate.labelName.textContent = textContent[lang].labelName;
+    elementsToUpdate.labelPhone.textContent = textContent[lang].labelPhone;
+    elementsToUpdate.labelProduct.textContent = textContent[lang].labelProduct;
+    elementsToUpdate.submitBtn.textContent = textContent[lang].submitBtn;
+    elementsToUpdate.contactPhone.innerHTML = textContent[lang].contactPhone + '<strong>+8801763-071247</strong>';
+    elementsToUpdate.contactAddress.textContent = textContent[lang].contactAddress;
+    elementsToUpdate.headerLine1.textContent = textContent[lang].headerLine1;
+    elementsToUpdate.headerLine2.textContent = textContent[lang].headerLine2;
+    elementsToUpdate.footer.textContent = textContent[lang].footer;
+  }
+
+  langToggleBtn.addEventListener('click', () => {
+    isBangla = !isBangla;
+    updateLanguage();
+  });
+
+  // Dark mode toggle
+  let isDark = false;
+  modeToggleBtn.addEventListener('click', () => {
+    isDark = !isDark;
+    document.body.classList.toggle('dark-mode', isDark);
+    modeToggleBtn.textContent = isDark ? textContent[isBangla ? 'bn' : 'en'].modeBtnDark : textContent[isBangla ? 'bn' : 'en'].modeBtnLight;
+  });
+
+  // Initialize UI
+  updateLanguage();
+  modeToggleBtn.textContent = textContent.bn.modeBtnLight;
+
+</script>
+
+</body>
+</html>
